@@ -3,6 +3,13 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import { getCollection } from 'astro:content';
+import FormattedDate from '../components/FormattedDate.astro';
+
+const posts = (await getCollection('blog')).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+const recentPosts = posts.slice(0, 3);
 ---
 
 <!doctype html>
@@ -13,21 +20,122 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<body>
 		<Header />
 		<main>
-			<h1>Hoş Geldiniz</h1>
-			<p>
-				Sonsöz Gazetesi’nde yayımlanan haftalık köşe yazılarımı, ekonomi, hukuk, 
-				kamu politikaları ve toplumsal yaşama dair değerlendirmelerimi bu kişisel arşivde bir araya getiriyorum.
-			</p>
-			<p>
-				Amacım; gündemin baş döndürücü hızı içinde kaybolan kritik ayrıntıları, 
-				rakamların ardında kalan toplumsal gerçekleri ve kamusal denetim ihtiyacını 
-				kayıt altına almak; okurla kalıcı, bağımsız ve doğrudan bir düşünce bağı kurmak.
-			</p>
+			<section class="hero">
+				<h1>Turan Özkan</h1>
+				<p class="subtitle">Gazeteci • Yazar • Medya Yöneticisi</p>
+				<p class="intro">
+					1980 yılından bu yana Türk basınında muhabirlikten genel yayın yönetmenliğine, 
+					televizyon yöneticiliğinden köşe yazarlığına uzanan mesleki birikim. 
+					Ekonomi, adalet, kamu yönetimi ve toplumsal dönüşümlere dair haftalık analizler ve arşiv.
+				</p>
+			</section>
+
 			<hr />
-			<p>
-				Güncel ve geçmiş tüm incelemelerime üst menüdeki <a href="/blog"><strong>Köşe Yazıları</strong></a> sekmesinden ulaşabilir, arşivdeki yazıları inceleyebilirsiniz.
-			</p>
+
+			<section class="latest-articles">
+				<div class="section-header">
+					<h2>Son Köşe Yazıları</h2>
+					<a href="/blog" class="view-all">Tüm Arşiv &rarr;</a>
+				</div>
+
+				<ul class="article-grid">
+					{
+						recentPosts.map((post) => (
+							<li class="article-card">
+								<a href={`/blog/${post.id}/`}>
+									{post.data.heroImage && (
+										<img width={720} height={360} src={post.data.heroImage} alt="" />
+									)}
+									<h3 class="title">{post.data.title}</h3>
+									<p class="date">
+										<FormattedDate date={post.data.pubDate} />
+									</p>
+									<p class="desc">{post.data.description}</p>
+								</a>
+							</li>
+						))
+					}
+				</ul>
+			</section>
 		</main>
 		<Footer />
 	</body>
 </html>
+
+<style>
+	.hero {
+		padding: 1.5rem 0 1rem 0;
+	}
+	.hero h1 {
+		font-size: 2.4rem;
+		margin-bottom: 0.2rem;
+		letter-spacing: -0.02em;
+	}
+	.subtitle {
+		font-size: 1.15rem;
+		color: rgb(var(--accent));
+		font-weight: 600;
+		margin-bottom: 1rem;
+	}
+	.intro {
+		font-size: 1.05rem;
+		line-height: 1.6;
+		color: rgb(var(--gray-dark));
+	}
+	.section-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		margin-top: 2rem;
+		margin-bottom: 1.5rem;
+	}
+	.section-header h2 {
+		font-size: 1.6rem;
+		margin: 0;
+	}
+	.view-all {
+		font-size: 0.95rem;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	.article-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 2rem;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	.article-card a {
+		display: block;
+		text-decoration: none;
+		transition: transform 0.2s ease;
+	}
+	.article-card a:hover {
+		transform: translateY(-3px);
+	}
+	.article-card img {
+		border-radius: 8px;
+		margin-bottom: 0.8rem;
+		width: 100%;
+		height: auto;
+		box-shadow: var(--box-shadow);
+	}
+	.article-card .title {
+		margin: 0 0 0.4rem 0;
+		font-size: 1.15rem;
+		line-height: 1.35;
+		color: rgb(var(--black));
+	}
+	.article-card .date {
+		margin: 0 0 0.5rem 0;
+		color: rgb(var(--gray));
+		font-size: 0.85rem;
+	}
+	.article-card .desc {
+		margin: 0;
+		color: rgb(var(--gray-dark));
+		font-size: 0.92rem;
+		line-height: 1.5;
+	}
+</style>
