@@ -40,20 +40,26 @@ const recentPosts = posts.slice(0, 4);
 
 				<ul class="article-grid">
 					{
-						recentPosts.map((post) => (
-							<li class="article-card">
-								<a href={`/blog/${post.id}/`}>
-									{post.data.heroImage && (
-										<img width={720} height={360} src={post.data.heroImage} alt="" />
-									)}
-									<h3 class="title">{post.data.title}</h3>
-									<p class="date">
-										<FormattedDate date={post.data.pubDate} />
-									</p>
-									<p class="desc">{post.data.description}</p>
-								</a>
-							</li>
-						))
+						recentPosts.map((post) => {
+							const imgSource = typeof post.data.heroImage === 'object' && post.data.heroImage !== null 
+								? post.data.heroImage.src 
+								: post.data.heroImage;
+
+							return (
+								<li class="article-card">
+									<a href={`/blog/${post.id}/`}>
+										{imgSource && (
+											<img width={720} height={360} src={imgSource} alt="" />
+										)}
+										<h3 class="title">{post.data.title}</h3>
+										<p class="date">
+											<FormattedDate date={post.data.pubDate} />
+										</p>
+										<p class="desc">{post.data.description}</p>
+									</a>
+								</li>
+							);
+						})
 					}
 				</ul>
 			</section>
@@ -120,6 +126,7 @@ const recentPosts = posts.slice(0, 4);
 		width: 100%;
 		height: auto;
 		box-shadow: var(--box-shadow);
+		object-fit: cover;
 	}
 	.article-card .title {
 		margin: 0 0 0.4rem 0;
