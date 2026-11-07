@@ -6,7 +6,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
-// Yazıları tarihe göre en yeniden eskiye doğru sıralıyoruz
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
@@ -14,10 +13,10 @@ const posts = (await getCollection('blog')).sort(
 const latestPost = posts[0];
 const otherPosts = posts.slice(1);
 
-const getImageUrl = (image: any) => {
+function getImageUrl(image) {
 	if (!image) return '';
-	return typeof image === 'object' && 'src' in image ? image.src : image;
-};
+	return typeof image === 'object' && image.src ? image.src : image;
+}
 ---
 
 <!doctype html>
@@ -60,7 +59,6 @@ const getImageUrl = (image: any) => {
 				</section>
 			)}
 
-			<!-- Önceki Yazılar Grid -->
 			<section class="posts-section">
 				<div class="section-header">
 					<h2>Önceki Köşe Yazıları</h2>
@@ -98,11 +96,12 @@ const getImageUrl = (image: any) => {
 <style>
 	main {
 		max-width: 1040px;
+		width: 100%;
 		margin: 0 auto;
 		padding: 2.5rem 1.25rem 4rem 1.25rem;
+		box-sizing: border-box;
 	}
 
-	/* Manşet / Son Yazı Alanı */
 	.lead-article {
 		background: #ffffff;
 		border-radius: 12px;
@@ -110,12 +109,14 @@ const getImageUrl = (image: any) => {
 		overflow: hidden;
 		margin-bottom: 3.5rem;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
+		width: 100%;
+		box-sizing: border-box;
 	}
 	.lead-wrapper {
 		display: grid;
 		grid-template-columns: 1.15fr 1fr;
 		align-items: center;
+		width: 100%;
 	}
 	.lead-image-box {
 		width: 100%;
@@ -136,6 +137,7 @@ const getImageUrl = (image: any) => {
 	}
 	.lead-content {
 		padding: 2.5rem 2.2rem;
+		box-sizing: border-box;
 	}
 	.lead-tag {
 		display: flex;
@@ -162,13 +164,11 @@ const getImageUrl = (image: any) => {
 		margin: 0 0 1rem 0;
 		font-weight: 700;
 		letter-spacing: -0.02em;
+		word-break: break-word;
 	}
 	.lead-title a {
 		color: #09090b;
 		text-decoration: none;
-	}
-	.lead-title a:hover {
-		color: #2563eb;
 	}
 	.lead-description {
 		font-size: 1rem;
@@ -186,16 +186,11 @@ const getImageUrl = (image: any) => {
 		text-decoration: none;
 		border-bottom: 2px solid #09090b;
 		padding-bottom: 2px;
-		transition: all 0.2s ease;
-	}
-	.read-btn:hover {
-		color: #2563eb;
-		border-color: #2563eb;
 	}
 
-	/* Diğer Yazılar Alanı */
 	.posts-section {
 		margin-top: 1rem;
+		width: 100%;
 	}
 	.section-header {
 		display: flex;
@@ -217,9 +212,6 @@ const getImageUrl = (image: any) => {
 		color: #71717a;
 		text-decoration: none;
 	}
-	.all-archive-link:hover {
-		color: #09090b;
-	}
 	.posts-grid {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -227,17 +219,15 @@ const getImageUrl = (image: any) => {
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		width: 100%;
 	}
 	.post-card {
 		background: #ffffff;
 		border: 1px solid #f4f4f5;
 		border-radius: 8px;
 		overflow: hidden;
-		transition: transform 0.2s ease, box-shadow 0.2s ease;
-	}
-	.post-card:hover {
-		transform: translateY(-3px);
-		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+		width: 100%;
+		box-sizing: border-box;
 	}
 	.card-link {
 		text-decoration: none;
@@ -256,10 +246,6 @@ const getImageUrl = (image: any) => {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
-		transition: transform 0.3s ease;
-	}
-	.post-card:hover .card-img-wrap img {
-		transform: scale(1.03);
 	}
 	.card-body {
 		padding: 1.25rem 1.1rem;
@@ -286,19 +272,38 @@ const getImageUrl = (image: any) => {
 		margin: 0;
 	}
 
-	@media (max-width: 820px) {
+	@media (max-width: 768px) {
+		main {
+			padding: 1rem 0.75rem 3rem 0.75rem;
+		}
+		.lead-article {
+			margin-bottom: 2rem;
+			border-radius: 8px;
+		}
 		.lead-wrapper {
 			grid-template-columns: 1fr;
 		}
 		.lead-image-box {
-			height: 240px;
+			height: 210px;
 			min-height: auto;
 		}
 		.lead-content {
-			padding: 1.5rem;
+			padding: 1.25rem 1rem;
+		}
+		.lead-title {
+			font-size: 1.35rem;
+			line-height: 1.35;
+		}
+		.lead-description {
+			font-size: 0.92rem;
+			margin-bottom: 1.2rem;
 		}
 		.posts-grid {
 			grid-template-columns: 1fr;
+			gap: 1.5rem;
+		}
+		.card-img-wrap {
+			height: 190px;
 		}
 	}
 </style>
