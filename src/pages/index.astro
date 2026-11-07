@@ -6,10 +6,18 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../components/FormattedDate.astro';
 
+// Yazıları tarihe göre en yeniden eskiye doğru sıralıyoruz
 const posts = (await getCollection('blog')).sort(
 	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-const recentPosts = posts.slice(0, 4);
+
+const latestPost = posts[0];
+const otherPosts = posts.slice(1);
+
+const getImageUrl = (image: any) => {
+	if (!image) return '';
+	return typeof image === 'object' && 'src' in image ? image.src : image;
+};
 ---
 
 <!doctype html>
@@ -20,46 +28,65 @@ const recentPosts = posts.slice(0, 4);
 	<body>
 		<Header />
 		<main>
-			<section class="hero">
-				<h1>Turan Özkan</h1>
-				<p class="subtitle">Gazeteci • Yazar • Medya Yöneticisi</p>
-				<p class="intro">
-					1980 yılından bu yana Türk basınında muhabirlikten genel yayın yönetmenliğine, 
-					televizyon yöneticiliğinden köşe yazarlığına uzanan mesleki birikim. 
-					Ekonomi, adalet, kamu yönetimi ve toplumsal dönüşümlere dair haftalık analizler ve arşiv.
-				</p>
-			</section>
+			{latestPost && (
+				<section class="lead-article">
+					<div class="lead-wrapper">
+						<div class="lead-image-box">
+							<a href={`/blog/${latestPost.id}/`}>
+								<img 
+									src={getImageUrl(latestPost.data.heroImage)} 
+									alt={latestPost.data.title} 
+								/>
+							</a>
+						</div>
+						<div class="lead-content">
+							<div class="lead-tag">
+								<span>Son Yazı</span>
+								<FormattedDate date={latestPost.data.pubDate} />
+							</div>
+							<h1 class="lead-title">
+								<a href={`/blog/${latestPost.id}/`}>
+									{latestPost.data.title}
+								</a>
+							</h1>
+							<p class="lead-description">
+								{latestPost.data.description}
+							</p>
+							<a href={`/blog/${latestPost.id}/`} class="read-btn">
+								Yazıyı Oku <span>&rarr;</span>
+							</a>
+						</div>
+					</div>
+				</section>
+			)}
 
-			<hr />
-
-			<section class="latest-articles">
+			<!-- Önceki Yazılar Grid -->
+			<section class="posts-section">
 				<div class="section-header">
-					<h2>Son Köşe Yazıları</h2>
-					<a href="/blog" class="view-all">Tüm Arşiv &rarr;</a>
+					<h2>Önceki Köşe Yazıları</h2>
+					<a href="/blog" class="all-archive-link">Tüm Arşiv &rarr;</a>
 				</div>
-
-				<ul class="article-grid">
+				<ul class="posts-grid">
 					{
-						recentPosts.map((post) => {
-							const imgSource = typeof post.data.heroImage === 'object' && post.data.heroImage !== null 
-								? post.data.heroImage.src 
-								: post.data.heroImage;
-
-							return (
-								<li class="article-card">
-									<a href={`/blog/${post.id}/`}>
-										{imgSource && (
-											<img width={720} height={360} src={imgSource} alt="" />
-										)}
-										<h3 class="title">{post.data.title}</h3>
-										<p class="date">
+						otherPosts.map((post) => (
+							<li class="post-card">
+								<a href={`/blog/${post.id}/`} class="card-link">
+									<div class="card-img-wrap">
+										<img 
+											src={getImageUrl(post.data.heroImage)} 
+											alt={post.data.title} 
+										/>
+									</div>
+									<div class="card-body">
+										<div class="card-date">
 											<FormattedDate date={post.data.pubDate} />
-										</p>
-										<p class="desc">{post.data.description}</p>
-									</a>
-								</li>
-							);
-						})
+										</div>
+										<h3 class="card-title">{post.data.title}</h3>
+										<p class="card-desc">{post.data.description}</p>
+									</div>
+								</a>
+							</li>
+						))
 					}
 				</ul>
 			</section>
@@ -69,80 +96,209 @@ const recentPosts = posts.slice(0, 4);
 </html>
 
 <style>
-	.hero {
-		padding: 1.5rem 0 1rem 0;
+	main {
+		max-width: 1040px;
+		margin: 0 auto;
+		padding: 2.5rem 1.25rem 4rem 1.25rem;
 	}
-	.hero h1 {
-		font-size: 2.4rem;
-		margin-bottom: 0.2rem;
+
+	/* Manşet / Son Yazı Alanı */
+	.lead-article {
+		background: #ffffff;
+		border-radius: 12px;
+		border: 1px solid #eaeaea;
+		overflow: hidden;
+		margin-bottom: 3.5rem;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	.lead-wrapper {
+		display: grid;
+		grid-template-columns: 1.15fr 1fr;
+		align-items: center;
+	}
+	.lead-image-box {
+		width: 100%;
+		height: 100%;
+		min-height: 350px;
+		background: #f4f4f4;
+	}
+	.lead-image-box a {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+	.lead-image-box img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+	}
+	.lead-content {
+		padding: 2.5rem 2.2rem;
+	}
+	.lead-tag {
+		display: flex;
+		align-items: center;
+		gap: 0.8rem;
+		font-size: 0.85rem;
+		color: #71717a;
+		margin-bottom: 0.9rem;
+		font-weight: 500;
+	}
+	.lead-tag span {
+		background: #18181b;
+		color: #ffffff;
+		padding: 0.2rem 0.55rem;
+		border-radius: 4px;
+		font-size: 0.75rem;
+		font-weight: 600;
+		letter-spacing: 0.03em;
+		text-transform: uppercase;
+	}
+	.lead-title {
+		font-size: 1.85rem;
+		line-height: 1.3;
+		margin: 0 0 1rem 0;
+		font-weight: 700;
 		letter-spacing: -0.02em;
 	}
-	.subtitle {
-		font-size: 1.15rem;
-		color: rgb(var(--accent));
-		font-weight: 600;
-		margin-bottom: 1rem;
+	.lead-title a {
+		color: #09090b;
+		text-decoration: none;
 	}
-	.intro {
-		font-size: 1.05rem;
+	.lead-title a:hover {
+		color: #2563eb;
+	}
+	.lead-description {
+		font-size: 1rem;
 		line-height: 1.6;
-		color: rgb(var(--gray-dark));
+		color: #52525b;
+		margin-bottom: 1.6rem;
+	}
+	.read-btn {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.4rem;
+		font-weight: 600;
+		font-size: 0.95rem;
+		color: #09090b;
+		text-decoration: none;
+		border-bottom: 2px solid #09090b;
+		padding-bottom: 2px;
+		transition: all 0.2s ease;
+	}
+	.read-btn:hover {
+		color: #2563eb;
+		border-color: #2563eb;
+	}
+
+	/* Diğer Yazılar Alanı */
+	.posts-section {
+		margin-top: 1rem;
 	}
 	.section-header {
 		display: flex;
 		justify-content: space-between;
-		align-items: baseline;
-		margin-top: 2rem;
-		margin-bottom: 1.5rem;
+		align-items: flex-end;
+		margin-bottom: 1.75rem;
+		border-bottom: 1px solid #e4e4e7;
+		padding-bottom: 0.6rem;
 	}
 	.section-header h2 {
-		font-size: 1.6rem;
+		font-size: 1.35rem;
+		font-weight: 700;
+		color: #09090b;
 		margin: 0;
 	}
-	.view-all {
-		font-size: 0.95rem;
+	.all-archive-link {
+		font-size: 0.9rem;
 		font-weight: 600;
+		color: #71717a;
 		text-decoration: none;
 	}
-	.article-grid {
+	.all-archive-link:hover {
+		color: #09090b;
+	}
+	.posts-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
-		list-style-type: none;
-		margin: 0;
+		list-style: none;
 		padding: 0;
-	}
-	.article-card a {
-		display: block;
-		text-decoration: none;
-		transition: transform 0.2s ease;
-	}
-	.article-card a:hover {
-		transform: translateY(-3px);
-	}
-	.article-card img {
-		border-radius: 8px;
-		margin-bottom: 0.8rem;
-		width: 100%;
-		height: auto;
-		box-shadow: var(--box-shadow);
-		object-fit: cover;
-	}
-	.article-card .title {
-		margin: 0 0 0.4rem 0;
-		font-size: 1.15rem;
-		line-height: 1.35;
-		color: rgb(var(--black));
-	}
-	.article-card .date {
-		margin: 0 0 0.5rem 0;
-		color: rgb(var(--gray));
-		font-size: 0.85rem;
-	}
-	.article-card .desc {
 		margin: 0;
-		color: rgb(var(--gray-dark));
-		font-size: 0.92rem;
+	}
+	.post-card {
+		background: #ffffff;
+		border: 1px solid #f4f4f5;
+		border-radius: 8px;
+		overflow: hidden;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+	}
+	.post-card:hover {
+		transform: translateY(-3px);
+		box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+	}
+	.card-link {
+		text-decoration: none;
+		color: inherit;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+	}
+	.card-img-wrap {
+		width: 100%;
+		height: 220px;
+		background: #f4f4f5;
+		overflow: hidden;
+	}
+	.card-img-wrap img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.3s ease;
+	}
+	.post-card:hover .card-img-wrap img {
+		transform: scale(1.03);
+	}
+	.card-body {
+		padding: 1.25rem 1.1rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+	}
+	.card-date {
+		font-size: 0.82rem;
+		color: #71717a;
+		margin-bottom: 0.4rem;
+	}
+	.card-title {
+		font-size: 1.15rem;
+		font-weight: 700;
+		line-height: 1.4;
+		margin: 0 0 0.5rem 0;
+		color: #09090b;
+	}
+	.card-desc {
+		font-size: 0.9rem;
 		line-height: 1.5;
+		color: #52525b;
+		margin: 0;
+	}
+
+	@media (max-width: 820px) {
+		.lead-wrapper {
+			grid-template-columns: 1fr;
+		}
+		.lead-image-box {
+			height: 240px;
+			min-height: auto;
+		}
+		.lead-content {
+			padding: 1.5rem;
+		}
+		.posts-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

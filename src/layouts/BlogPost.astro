@@ -1,77 +1,45 @@
 ---
-import { Image } from 'astro:assets';
-import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
-import Header from '../components/Header.astro';
-
-type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+
+// heroImage bir ImageMetadata nesnesi ise .src özelliğini, düz metin ise kendisini alır
+const imageSrc = heroImage && typeof heroImage === 'object' && 'src' in heroImage 
+  ? (heroImage as any).src 
+  : heroImage;
 ---
 
-<html lang="en">
+<html lang="tr">
 	<head>
 		<BaseHead title={title} description={description} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
+				{imageSrc && (
+					<div class="hero-image">
+						<img width={1020} height={510} src={imageSrc} alt={title} />
+					</div>
+				)}
 				<div class="prose">
 					<div class="title">
-						<div class="date">
-							<FormattedDate date={pubDate} />
-							{updatedDate && (
-								<div class="last-updated-on">
-									Last updated on <FormattedDate date={updatedDate} />
-								</div>
-							)}
-						</div>
+						{pubDate && (
+							<div class="date">
+								<FormattedDate date={pubDate} />
+								{
+									updatedDate && (
+										<div class="last-updated-on">
+											Güncelleme: <FormattedDate date={updatedDate} />
+										</div>
+									)
+								}
+							</div>
+						)}
 						<h1>{title}</h1>
 						<hr />
 					</div>
@@ -82,3 +50,112 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		<Footer />
 	</body>
 </html>
+
+<style>
+	main {
+		width: calc(100% - 2em);
+		max-width: 100%;
+		margin: 0;
+		padding: 2em 0;
+	}
+	.hero-image {
+		width: 100%;
+		max-width: 780px;
+		margin: 0 auto 2rem auto;
+	}
+	.hero-image img {
+		display: block;
+		margin: 0 auto;
+		border-radius: 8px;
+		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+	}
+	.prose {
+		width: 740px;
+		max-width: calc(100% - 2em);
+		margin: auto;
+		padding: 0;
+		color: #2b2b2b;
+		font-size: 1.125rem;
+		line-height: 1.85;
+	}
+	.title {
+		margin-bottom: 2rem;
+		text-align: center;
+		line-height: 1.3;
+	}
+	.title h1 {
+		margin: 0.5rem 0 1rem 0;
+		font-size: 2.25rem;
+		font-weight: 700;
+		color: #111;
+		letter-spacing: -0.02em;
+	}
+	.date {
+		margin-bottom: 0.5rem;
+		color: #666;
+		font-size: 0.95rem;
+		font-weight: 500;
+	}
+	.last-updated-on {
+		font-style: italic;
+	}
+	hr {
+		border: 0;
+		border-top: 1px solid #eaeaea;
+		margin: 1.5rem 0 2rem 0;
+	}
+	/* Gövde Metni ve Tipografi Dengesi */
+	:global(.prose p) {
+		margin-bottom: 1.35rem;
+		color: #2e2e2e;
+		letter-spacing: -0.003em;
+	}
+	/* Ara Başlıklar (H2) */
+	:global(.prose h2) {
+		font-size: 1.45rem;
+		font-weight: 700;
+		color: #1a1a1a;
+		margin-top: 2.2rem;
+		margin-bottom: 0.8rem;
+		line-height: 1.4;
+		letter-spacing: -0.01em;
+		padding-bottom: 0.3rem;
+		border-bottom: 1px solid #f0f0f0;
+	}
+	/* Alt Başlıklar (H3) */
+	:global(.prose h3) {
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: #222;
+		margin-top: 1.8rem;
+		margin-bottom: 0.6rem;
+	}
+	:global(.prose ul, .prose ol) {
+		margin-bottom: 1.35rem;
+		padding-left: 1.5rem;
+	}
+	:global(.prose li) {
+		margin-bottom: 0.4rem;
+	}
+	:global(.prose blockquote) {
+		border-left: 3px solid #111;
+		padding-left: 1.2rem;
+		margin: 1.5rem 0;
+		color: #555;
+		font-style: italic;
+	}
+	@media (max-width: 720px) {
+		.title h1 {
+			font-size: 1.8rem;
+		}
+		:global(.prose h2) {
+			font-size: 1.3rem;
+		}
+		.prose {
+			font-size: 1.05rem;
+		}
+	}
+</style>

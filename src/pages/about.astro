@@ -1,16 +1,20 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 ---
 
 <Layout
 	title="Turan Özkan"
 	description="Turan Özkan yaşam öyküsü, eğitim geçmişi, basın çalışmaları ve uzmanlık alanları."
-	pubDate={new Date('1966-08-01')}
 	heroImage=""
 >
 	<div class="wiki-container">
 		<div class="wiki-infobox">
 			<div class="infobox-title">Turan Özkan</div>
+			<div class="infobox-image-box">
+				<img src={bioImg.src} alt="Turan Özkan" class="infobox-photo" />
+				<div class="infobox-caption">Gazeteci ve Yazar Turan Özkan</div>
+			</div>
 			<div class="infobox-data">
 				<div class="row">
 					<span class="label">Doğum</span>
@@ -146,6 +150,23 @@ import Layout from '../layouts/BlogPost.astro';
 		background-color: #eaecf0;
 		border-bottom: 1px solid #a2a9b1;
 		margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+	}
+	.infobox-image-box {
+		text-align: center;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #eaecf0;
+		margin-bottom: 0.5rem;
+	}
+	.infobox-photo {
+		max-width: 100%;
+		height: auto;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+	.infobox-caption {
+		font-size: 0.8rem;
+		color: #54595d;
+		margin-top: 0.4rem;
 	}
 	.infobox-data .row {
 		display: flex;

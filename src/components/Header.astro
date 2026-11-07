@@ -1,10 +1,16 @@
 ---
 import HeaderLink from './HeaderLink.astro';
+import profileImg from '../assets/profil-header.jpg';
 ---
 
 <header>
 	<nav>
-		<h2><a href="/">Turan Özkan</a></h2>
+		<div class="brand">
+			<a href="/" class="brand-link">
+				<img src={profileImg.src} alt="Turan Özkan" class="header-avatar" />
+				<h2>Turan Özkan</h2>
+			</a>
+		</div>
 		<div class="internal-links">
 			<HeaderLink href="/">Ana Sayfa</HeaderLink>
 			<HeaderLink href="/blog">Köşe Yazıları</HeaderLink>
@@ -54,14 +60,24 @@ import HeaderLink from './HeaderLink.astro';
 		background: white;
 		box-shadow: 0 2px 8px rgba(var(--black), 5%);
 	}
+	.brand-link {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		text-decoration: none;
+		color: rgb(var(--black));
+	}
+	.header-avatar {
+		width: 36px;
+		height: 36px;
+		border-radius: 50%;
+		object-fit: cover;
+		border: 1.5px solid #eaeaea;
+		box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+	}
 	h2 {
 		margin: 0;
 		font-size: 1.15em;
-	}
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-		color: rgb(var(--black));
 	}
 	nav {
 		display: flex;
