@@ -34,7 +34,19 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 				</div>
 				<div class="row">
 					<span class="label">Eğitim</span>
-					<span class="val">Lisans Eğitimi: Uluslararası İlişkiler<br />Yüksek Lisans: İnsan İlişkileri</span>
+					<span class="val edu-list">
+						<strong>Önlisans:</strong>
+						<span>• Kültürel Miras ve Turizm</span>
+						<span>• Yeni Medya ve Gazetecilik</span>
+						<span>• Sosyal Medya Yöneticiliği</span>
+						<span>• Halkla İlişkiler ve Tanıtım</span>
+						<strong class="edu-subhead">Lisans:</strong>
+						<span>• Uluslararası İlişkiler</span>
+						<span>• Siyaset Bilimi ve Kamu Yönetimi</span>
+						<span>• Temel Eğitim Bilimleri</span>
+						<strong class="edu-subhead">Yüksek Lisans:</strong>
+						<span>• İnsan İlişkileri</span>
+					</span>
 				</div>
 				<div class="row">
 					<span class="label">Uzmanlık</span>
@@ -77,7 +89,7 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 
 		<h2 id="ilk-yillar-ve-egitim">İlk yılları ve eğitim yaşamı</h2>
 		<p>
-			1 Ağustos 1966 tarihinde Mardin'in Kızıltepe ilçesinde doğdu. Çok alanlı bir yükseköğretim sürecinden geçen Özkan, lisans düzeyindeki eğitimlerinin ardından <strong>İnsan İlişkileri</strong> alanında yüksek lisans derecesi aldı. İnsan davranışları, toplumsal yapılar ve öbek etkileşimlerine odaklanan bu eğitim, köşe yazılarının ve araştırmalarının merkezine insan bilimi (antropoloji), toplum bilimi (sosyoloji) ve ruh bilimi (psikoloji) yöntemlerini yerleştirmesinde temel dayanak oldu.
+			1 Ağustos 1966 tarihinde Mardin'in Kızıltepe ilçesinde doğdu. Çok alanlı bir yükseköğretim sürecinden geçen Özkan; Kültürel Miras ve Turizm, Yeni Medya ve Gazetecilik, Sosyal Medya Yöneticiliği ile Halkla İlişkiler ve Tanıtım önlisans derecelerinin yanı sıra Uluslararası İlişkiler, Siyaset Bilimi ve Kamu Yönetimi ile Temel Eğitim Bilimleri lisans eğitimlerini tamamladı. Ardından <strong>İnsan İlişkileri</strong> alanında yüksek lisans derecesi aldı. İnsan davranışları, toplumsal yapılar ve öbek etkileşimlerine odaklanan bu zengin akademik altyapı, köşe yazılarının ve araştırmalarının merkezine antropoloji, sosyoloji ve psikoloji yöntemlerini yerleştirmesinde temel dayanak oldu.
 		</p>
 
 		<h2 id="basin-yasam">Basın yaşamı ve çalışma ortamları</h2>
@@ -130,80 +142,6 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 	.wiki-container {
 		position: relative;
 		line-height: 1.75;
-		color: #202122;
-	}
-	.lead-text {
-		font-size: 1.05rem;
-		margin-bottom: 1.5rem;
-	}
-	.wiki-infobox {
-		float: right;
-		width: 320px;
-		margin: 0 0 1.5rem 1.5rem;
-		background: #f8f9fa;
-		border: 1px solid #a2a9b1;
-		padding: 0.5rem;
-		font-size: 0.88rem;
-		border-radius: 2px;
-	}
-	.infobox-title {
-		text-align: center;
-		font-weight: bold;
-		font-size: 1.15rem;
-		padding: 0.4rem 0;
-		background-color: #eaecf0;
-		border-bottom: 1px solid #a2a9b1;
-		margin: -0.5rem -0.5rem 0.5rem -0.5rem;
-	}
-	.infobox-image-box {
-		text-align: center;
-		padding: 0.5rem 0;
-		border-bottom: 1px solid #eaecf0;
-		margin-bottom: 0.5rem;
-	}
-	.infobox-photo {
-		max-width: 100%;
-		height: auto;
-		border-radius: 2px;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-	}
-	.infobox-caption {
-		font-size: 0.8rem;
-		color: #54595d;
-		margin-top: 0.4rem;
-	}
-	.infobox-data .row {
-		display: flex;
-		padding: 0.4rem 0;
-		border-bottom: 1px solid #eaecf0;
-	}
-	.infobox-data .row:last-child {
-		border-bottom: none;
-	}
-	.infobox-data .label {
-		font-weight: 600;
-		width: 38%;
-		padding-right: 0.5rem;
-		color: #54595d;
-		flex-shrink: 0;
-	}
-	.infobox-data .val {
-		width: 62%;
-		word-break: break-all;
-	}
-	.email-link {
-		color: #0645ad;
-		text-decoration: none;
-	}
-	.email-link:hover {
-		text-decoration: underline;
-	}
-	.wiki-toc {
-		display: inline-block;
-		background: #f8f9fa;
-		border: 1px solid #a2a9b1;
-		padding: 0
-
 cat << 'EOF' > src/pages/about.astro
 ---
 import Layout from '../layouts/BlogPost.astro';
@@ -241,7 +179,19 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 				</div>
 				<div class="row">
 					<span class="label">Eğitim</span>
-					<span class="val">Lisans Eğitimi: Uluslararası İlişkiler<br />Yüksek Lisans: İnsan İlişkileri</span>
+					<span class="val edu-list">
+						<strong>Önlisans:</strong>
+						<span>• Kültürel Miras ve Turizm</span>
+						<span>• Yeni Medya ve Gazetecilik</span>
+						<span>• Sosyal Medya Yöneticiliği</span>
+						<span>• Halkla İlişkiler ve Tanıtım</span>
+						<strong class="edu-subhead">Lisans:</strong>
+						<span>• Uluslararası İlişkiler</span>
+						<span>• Siyaset Bilimi ve Kamu Yönetimi</span>
+						<span>• Temel Eğitim Bilimleri</span>
+						<strong class="edu-subhead">Yüksek Lisans:</strong>
+						<span>• İnsan İlişkileri</span>
+					</span>
 				</div>
 				<div class="row">
 					<span class="label">Uzmanlık</span>
@@ -284,7 +234,7 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 
 		<h2 id="ilk-yillar-ve-egitim">İlk yılları ve eğitim yaşamı</h2>
 		<p>
-			1 Ağustos 1966 tarihinde Mardin'in Kızıltepe ilçesinde doğdu. Çok alanlı bir yükseköğretim sürecinden geçen Özkan, lisans düzeyindeki eğitimlerinin ardından <strong>İnsan İlişkileri</strong> alanında yüksek lisans derecesi aldı. İnsan davranışları, toplumsal yapılar ve öbek etkileşimlerine odaklanan bu eğitim, köşe yazılarının ve araştırmalarının merkezine insan bilimi (antropoloji), toplum bilimi (sosyoloji) ve ruh bilimi (psikoloji) yöntemlerini yerleştirmesinde temel dayanak oldu.
+			1 Ağustos 1966 tarihinde Mardin'in Kızıltepe ilçesinde doğdu. Çok alanlı bir yükseköğretim sürecinden geçen Özkan; Kültürel Miras ve Turizm, Yeni Medya ve Gazetecilik, Sosyal Medya Yöneticiliği ile Halkla İlişkiler ve Tanıtım önlisans derecelerinin yanı sıra Uluslararası İlişkiler, Siyaset Bilimi ve Kamu Yönetimi ile Temel Eğitim Bilimleri lisans eğitimlerini tamamladı. Ardından <strong>İnsan İlişkileri</strong> alanında yüksek lisans derecesi aldı. İnsan davranışları, toplumsal yapılar ve öbek etkileşimlerine odaklanan bu zengin akademik altyapı, köşe yazılarının ve araştırmalarının merkezine antropoloji, sosyoloji ve psikoloji yöntemlerini yerleştirmesinde temel dayanak oldu.
 		</p>
 
 		<h2 id="basin-yasam">Basın yaşamı ve çalışma ortamları</h2>
@@ -343,64 +293,94 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 		font-size: 1.05rem;
 		margin-bottom: 1.5rem;
 	}
+	/* Genişletilmiş Wikipedia Bilgi Kutusu */
 	.wiki-infobox {
 		float: right;
-		width: 320px;
-		margin: 0 0 1.5rem 1.5rem;
+		width: 380px;
+		margin: 0 0 1.5rem 2rem;
 		background: #f8f9fa;
 		border: 1px solid #a2a9b1;
-		padding: 0.5rem;
+		padding: 0.6rem;
 		font-size: 0.88rem;
-		border-radius: 2px;
+		border-radius: 4px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.05);
 	}
 	.infobox-title {
 		text-align: center;
-		font-weight: bold;
-		font-size: 1.15rem;
-		padding: 0.4rem 0;
+		font-weight: 700;
+		font-size: 1.2rem;
+		padding: 0.5rem 0;
 		background-color: #eaecf0;
 		border-bottom: 1px solid #a2a9b1;
-		margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+		margin: -0.6rem -0.6rem 0.6rem -0.6rem;
+		border-radius: 3px 3px 0 0;
 	}
 	.infobox-image-box {
 		text-align: center;
-		padding: 0.5rem 0;
+		padding: 0.4rem 0;
 		border-bottom: 1px solid #eaecf0;
-		margin-bottom: 0.5rem;
+		margin-bottom: 0.6rem;
 	}
 	.infobox-photo {
 		max-width: 100%;
 		height: auto;
-		border-radius: 2px;
-		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+		border-radius: 3px;
+		box-shadow: 0 1px 4px rgba(0,0,0,0.1);
 	}
 	.infobox-caption {
 		font-size: 0.8rem;
 		color: #54595d;
-		margin-top: 0.4rem;
+		margin-top: 0.45rem;
 	}
 	.infobox-data .row {
 		display: flex;
-		padding: 0.4rem 0;
+		padding: 0.45rem 0;
 		border-bottom: 1px solid #eaecf0;
+		align-items: baseline;
 	}
 	.infobox-data .row:last-child {
 		border-bottom: none;
 	}
 	.infobox-data .label {
 		font-weight: 600;
-		width: 38%;
-		padding-right: 0.5rem;
+		width: 110px;
+		min-width: 110px;
+		padding-right: 0.6rem;
 		color: #54595d;
 		flex-shrink: 0;
 	}
 	.infobox-data .val {
-		width: 62%;
-		word-break: break-all;
+		flex-grow: 1;
+		word-break: normal;
+		line-height: 1.5;
+	}
+	/* Eğitim Dökümü Özel Stili */
+	.edu-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.2rem;
+	}
+	.edu-list strong {
+		color: #111;
+		margin-top: 0.25rem;
+		font-size: 0.85rem;
+	}
+	.edu-list strong:first-child {
+		margin-top: 0;
+	}
+	.edu-subhead {
+		margin-top: 0.4rem !important;
+	}
+	.edu-list span {
+		font-size: 0.85rem;
+		color: #333;
+		padding-left: 0.2rem;
+		white-space: normal;
 	}
 	.email-link {
 		color: #0645ad;
 		text-decoration: none;
+		word-break: break-all;
 	}
 	.email-link:hover {
 		text-decoration: underline;
@@ -463,7 +443,7 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 		margin-top: 1.2rem;
 		color: #333;
 	}
-	@media (max-width: 720px) {
+	@media (max-width: 820px) {
 		.wiki-infobox {
 			float: none;
 			width: 100%;
