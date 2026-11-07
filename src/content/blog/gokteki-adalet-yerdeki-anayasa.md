@@ -1,77 +1,67 @@
 ---
 title: 'Gökteki Adalet, Yerdeki Anayasa ve Aramızdaki Uçurum'
-description: 'Kutsal kitaplardaki adalet buyrukları, anayasal güvenceler ve Türkiye’de yargı bağımsızlığı ile basın özgürlüğünün acı gerçekleri.'
-pubDate: 'Oct 15 2026'
+description: 'Kutsal metinlerdeki adalet buyrukları, anayasal güvenceler ve uygulamadaki çelişkiler üzerine bir değerlendirme.'
+pubDate: '2026-10-15'
 heroImage: '../../assets/gokteki-adalet-kapak.jpg'
-category: 'Köşe Yazısı'
-source: 'Sonsöz Gazetesi'
 ---
 
 1 Ekim’de TBMM’nin yeni yasama yılı açılırken Cumhurbaşkanı Recep Tayyip Erdoğan yeni, sivil ve özgürlükçü bir anayasayı dönemin merkezine koydu. 
+TBMM Başkanı Numan Kurtulmuş ise ilk dört madde üzerinde gereksiz tartışma yürütülmemesini istedi, ancak bunun tartışılmaması olanaksız bir konu. 
+Yeni Anayasayı bir kenara bırakalım; yürürlükteki Anayasa, ilk dört madde de içinde olmak üzere ne kadar uygulanıyor?
 
-TBMM Başkanı Numan Kurtulmuş ise ilk dört madde üzerinde gereksiz tartışma yürütülmemesini istedi, ama bunun tartışılmaması olanaksız bir konu. 
+## Adalet Dört Kutsal Kitapta
 
-Yeni Anayasayı bir kenara bırakalım, mevcut Anayasa, ilk dört madde dahil, ne kadar uygulanıyor?
+Bu soru yalnızca hukukun değil, inancın da sorusudur. 
+Hz. İbrahim’den bu yana gelen dört semavi dini ve kitabı hak bilen biz Müslümanlar için değiştirilmemiş ve bozulmamış bazı buyruklara baktım:
 
-### Adalet Dört Kutsal Kitapta
+* **Tevrat:** Hz. Musa’ya indirilen Tevrat, *"Yöneticilere adaleti saptırmamayı ve rüşvet almamayı öğütler"* (Tesniye 16:19), *"Yetim ve yabancının hakkını çiğnememesini ister"* (Tesniye 24:17).
+* **Zebur:** Hz. Davud’un Zebur’u, *"Rab’bin adaleti sevdiğini söyler"* (Mezmurlar 11:7).
+* **İncil:** İncil’de Hz. İsa, *"Adaleti, merhameti ve bağlılığı savsaklayanları eleştirir"* (Matta 23:23), *"Büyüklüğü hizmet etmekte arar"* (Markos 10:43).
+* **Kur'an-ı Kerim:** Dinimiz İslam’ın kutsal kitabı, Hz. Muhammed’e indirilen son kitap Kur’an-ı Kerim ne buyuruyor? *"Emanetlerin ehline verilmesini ve insanlar arasında adaletle hükmedilmesini buyurur"* (Nisa 58), *"Adaletin kişinin kendisi ya da yakınları aleyhine olsa bile ayakta tutulmasını ister"* (Nisa 135).
 
-Bu soru yalnızca hukukun değil, inancın da sorusu. 
+Hz. Ali de halifeliği döneminde, Mısır Valisi Malik el-Eşter’e gönderdiği mektupta yöneticiden merhamet, zayıfı koruma ve kamu malını kişisel çıkara alet etmemesini ister.
 
-Hz. İbrahim’den bu yana gelen dört semavi dini ve kitabı hak bilen biz Müslümanlar için değiştirilmemiş ve tahrif edilmemiş bazı hükümlere baktım.
+## Anayasa Ne Diyor, Uygulama Ne?
 
-Hz. Musa’ya indirilen Tevrat, "<strong><em>Yöneticilere adaleti saptırmamayı ve rüşvet almamayı öğütler</em></strong>" (Tesniye 16:19), "<strong><em>Yetim ve yabancının hakkını çiğnememesini ister</em></strong>" (Tesniye 24:17). 
+Gelelim, tüm yasaların üzerinde bulunan ve yasaların kendisine aykırı olamayacağı kesin kurala bağlanmış Türkiye Cumhuriyeti Anayasası’na:
 
-Hz. Davud’un Zebur’u, "<strong><em>Rab’bin adaleti sevdiğini söyler</em></strong>" (Mezmurlar 11:7). 
+* **2. Madde:** Türkiye’yi demokratik, laik ve sosyal bir hukuk devleti sayar.
+* **10. Madde:** Hiçbir kişiye, aileye ya da öbeğe ayrıcalık tanınamayacağını belirtir.
+* **138. Madde:** Yargıçların bağımsızlığını güvenceye alır.
+* **153. Madde:** Anayasa Mahkemesi kararlarını herkes için bağlayıcı kılar.
 
-İncil’de Hz. İsa, "<strong><em>Adaleti, merhameti ve sadakati ihmal edenleri eleştirir</em></strong>" (Matta 23:23), "<strong><em>Büyüklüğü hizmet etmekte arar</em></strong>" (Markos 10:43). 
+Uygulama ise tartışmalıdır; çünkü yerel mahkemeler, en üst karar makamı olan Anayasa Mahkemesi’nin kararlarını yok saymaktadır.
 
-Peki dinimiz İslam’ın kutsal kitabı, Hz. Muhammed’e indirilen son kitap Kur’an-ı Kerim ne diyor? 
+## Hukukun Üstünlüğü Endeksi
 
-"<strong><em>Emanetlerin ehline verilmesini ve insanlar arasında adaletle hükmedilmesini emreder</em></strong>" (Nisa 58), "<strong><em>Adaletin kişinin kendisi ya da yakınları aleyhine olsa bile ayakta tutulmasını ister</em></strong>" (Nisa 135). 
+Dünya Adalet Projesi’nin 2025 endeksinde Türkiye hukukun üstünlüğünde 143 ülke arasında 118. sırada yer aldı. Oysa daha 2015'te 80. sıradaydı; neden böylesine hızla geriliyoruz? 
 
-Hz. Ali de halifeliği döneminde, Mısır Valisi Malik el-Eşter’e gönderdiği mektupta, yöneticiden merhamet, zayıfı koruma ve kamu malını kişisel çıkara alet etmemesini ister.
+Temel haklarda 134’üncü, yönetim yetkilerinin sınırlandırılmasında 136’ıncı sıradayız. Yolsuzluk Algı Endeksi’nde puanımız 2013'te 50 iken 2025'te 31'e geriledi. İktidar ise bu ölçümlerin nesnel ölçütlere dayanmadığını ve iyileştirmeleri yansıtmadığını öne sürmektedir.
 
-### Anayasa Ne Diyor, Uygulama Ne?
+## “Basın Hür” mü?
 
-Gelelim, tüm yasaların üzerinde olan ve yasaların ona aykırılık içeremeyeceği kesin hükme bağlanmış Türkiye Cumhuriyeti Anayasası’na. 
+Türkiye Cumhuriyeti Anayasası’nın 28. maddesi açık bir kural koyarak *"Basın hürdür, sansür edilemez"* der ve devlete basın ile haber alma özgürlüklerini sağlayacak önlemleri alma ödevi yükler. 
 
-* **2. Madde:** Türkiye’yi demokratik, laik ve sosyal bir hukuk devleti sayar. 
-* **10. Madde:** Hiçbir kişiye, aileye ya da zümreye imtiyaz tanınamayacağını söyler. 
-* **138. Madde:** Hâkimlerin bağımsızlığını güvenceye alır. 
-* **153. Madde:** Anayasa Mahkemesi kararlarını herkes için bağlayıcı kılar. 
+Aynı madde, basın özgürlüğünün sınırlandırılmasında Anayasa’nın 26. maddesindeki düşünceyi açıklama ve yayma hakkı ile 27. maddedeki bilim ve sanat özgürlüğü kurallarının uygulanacağını belirtir. 26. madde herkese düşünce ve kanaatlerini söz, yazı veya başka yollarla açıklama ve yayma hakkını tanır. Bu hak, resmî makamların karışması olmaksızın haber ve fikir alma-verme serbestliğini de kapsar.
 
-Uygulama ise tartışmalı. Çünkü yerel mahkemeler, en üst karar yetkilisi olan Anayasa Mahkemesi’nin kararlarını dahi yok sayabiliyor.
+5187 sayılı Basın Kanunu’nun 3. maddesi de *"Basın özgürdür"* diyerek bilgi edinme, yayma, eleştirme ve yorumlama haklarını güvence altına alır; sınırlandırmaları ise yalnızca demokratik toplum düzeninin gereklerine uygun meşru amaçlarla olanaklı kılar. Haber kaynağını açıklamaya zorlanamama (madde 12) ve basımevi kurmanın izne bağlanamaması gibi hükümler de bu çerçevenin parçasıdır.
 
-### Hukukun Üstünlüğü Endeksi
+Hukukun yazılı durumu bu denli açıkken; bağımsız yayın organlarına kayyım atanması, gazetecilerin gözaltına alınması ve genel ağdaki erişim engellerinin yaygınlaşması, Anayasa’nın 13. maddesindeki "hakkın özüne dokunmama" ve "ölçülülük" ilkeleriyle nasıl bağdaşacaktır? Yasa metinleri özgürlüğü böylesine korurken uygulamanın onu daraltması, hukuk devletinin temel çelişkilerinden birini ortaya koyuyor.
 
-Dünya Adalet Projesi’nin 2025 endeksinde Türkiye hukukun üstünlüğünde 143 ülke arasında 118. sırada; oysa daha 2015'te 80. sıradaydı. Neden ısrarla ve hızla geriliyoruz? 
+## Basın Özgürlüğü’nde 159. Sıradayız
 
-Temel haklarda 134’üncü, hükümet yetkilerinin sınırlandırılmasında 136’ncı sıradayız. Yolsuzluk Algı Endeksi’nde puanımız 2013'te 50 iken 2025'te 31'e geriledi. İktidar ise bunların objektif kriterlere dayanmadığını ve reformları yansıtmadığını savunuyor.
+Yönetim ne zaman hesap vermekte zorlandığı bir sav ile karşı karşıya gelse, hemen basına, sosyal medya araçlarına, internetteki bant genişliğine ya da yerel yönetimlere yönelik bir işlem başlatılır ve gündem bir anda değişir.
 
-### “Basın Hür” mü?
+Dün sabah sahibi Cafer Mahiroğlu’na yönelik suçlamalar gerekçesiyle kayyım atanarak canlı yayını durdurulan Halk TV’de 2011-2012 yıllarında birlikte çalıştığım Oya Lale Özan Arslan, "Halkı yanıltıcı bilgi" ve "Terör propagandası" savlarıyla halen tutukludur. Oysa Lale’yi gazetecilik coşkusu, haber merkezinde yankılanan şen kahkahası ve ikiz kızları Lal ile Dora’ya düşkünlüğüyle biliyorum.
 
-Türkiye Cumhuriyeti Anayasası’nın 28. maddesi açık bir hükümle "<strong><em>Basın hürdür, sansür edilemez</em></strong>" der ve devlete basın ile haber alma hürriyetlerini sağlayacak tedbirleri alma görevi yükler. 
+Gazetecilik yaşamım süresince iki kez birlikte çalışma olanağı bulduğum, ülkesini sevmekten başka amacı olmayan ve yalnızca bağımsız habercilik yapmaya gayret eden Dr. Merdan Yanardağ da casusluk suçlamasıyla Ekim 2025'ten bu yana tutuklu yargılanıyor. Tele1'e kayyım atandı; çalışanlarının kurduğu Tele2 Haber ise RTÜK’ün istediği lisans bedelini karşılayamayarak 2 Ekim’de yayınına son vermek zorunda kaldı.
 
-Aynı madde, basın hürriyetinin sınırlanmasında Anayasa’nın 26. maddesindeki düşünceyi açıklama ve yayma hürriyeti ile 27. maddedeki bilim ve sanat hürriyeti hükümlerinin uygulanacağını belirtir. 26. madde herkese düşünce ve kanaatlerini söz, yazı veya başka yollarla açıklama ve yayma hakkını tanır. Bu hak resmî makamların müdahalesi olmaksızın haber ve fikir alma-verme serbestliğini de kapsar. 
+Son dönemde fon soruşturmasıyla bağlantılı paylaşımları nedeniyle Şaban Sevinç ve Sözcü editörü Mustafa Balcı tutuklandı; İsmail Saymaz, Murat Ağırel gibi meslektaşlarımız ev hapsinde tutuluyor. Yeni Parti’nin raporuna göre son 70 günde 25 gazeteci gözaltına alındı, 10'u tutuklandı ve 1350 sosyal ağ hesabına engel getirildi. Basın özgürlüğü sıralamasında da 2025 yılında 180 ülke arasında 159. basamağa geriledik.
 
-5187 sayılı Basın Kanunu’nun 3. maddesi de "<strong><em>Basın özgürdür</em></strong>" diyerek bilgi edinme, yayma, eleştirme ve yorumlama haklarını güvence altına alır; sınırlamaları ise yalnızca demokratik toplum düzeninin gereklerine uygun meşru amaçlarla mümkün kılar. Haber kaynağının açıklanmasına zorlanamama (madde 12) ve basımevi kurmanın izne bağlanamaması da bu çerçevenin parçasıdır. 
+## İktidarın Elindeki “Sopa” El Değiştirirse…
 
-Hukukun yazılı hali bu kadar netken; bağımsız yayın organlarına kayyım atanması, gazetecilerin gözaltına alınması ve erişim engellerinin yaygınlaşması, Anayasa’nın 13. maddesindeki "<strong><em>Hakkın özüne dokunmama</em></strong>" ve "<strong><em>Ölçülülük</em></strong>" ilkeleriyle nasıl bağdaştırılacak? 
+Bugün iktidarın elinde olan sopa, demokrasinin doğası gereği yarın iktidara gelme olasılığı bulunan muhalefetin eline geçerse ne olacaktır? 
 
-Yasa metinleri özgürlüğü böylesine korurken uygulamanın onu daraltması, hukuk devletinin temel çelişkilerinden birini ortaya koyuyor. Bu ne perhiz bu ne lahana turşusu!
+Bugünkü iktidar, sopanın aynı biçimde kullanılmasını alkışlayacak mıdır, yoksa karşı mı çıkacaktır?
 
-### Basın Özgürlüğü’nde 159. Sıradayız
-
-İktidar ne zaman hesap vermekte zorlandığı bir iddia ile karşı karşıya gelse; hemen medyaya, sosyal medya platformlarına, internetteki bant genişliğine ya da belediyelere yönelik bir operasyon yapılıyor ve gündem bir anda değişiveriyor. 
-
-Dün sabah sahibi Cafer Mahiroğlu’na yönelik suçlamalar nedeniyle kayyım atanarak canlı yayını durdurulan Halk TV’de, 2011-2012 döneminde birlikte çalıştığım Oya Lale Özan Arslan, "<strong><em>Halkı yanıltıcı bilgi</em></strong>" ve "<strong><em>Terör propagandası</em></strong>" suçlamalarıyla halen tutuklu. Oysa Lale’yi gazetecilik heyecanı, haber merkezinde yankılanan şen kahkahası ve ikiz kızları Lal ve Dora’ya düşkünlüğüyle biliyorum.
-
-Gazetecilik yaşamım süresince iki kez birlikte çalışma olanağı bulduğum, ülkesini sevip korumaktan başkaca amacı olmayan ve sadece bağımsız gazetecilik yapmaya çalışan Dr. Merdan Yanardağ da casusluk suçlamasıyla Ekim 2025'ten beri tutuklu yargılanıyor. Tele1'e kayyım atandı; çalışanlarının kurduğu Tele2 Haber ise RTÜK’ün istediği lisans bedelini karşılayamayarak 2 Ekim’de yayınına son vermek zorunda kaldı. 
-
-Son dönemde fon soruşturmasıyla bağlantılı paylaşımları nedeniyle Şaban Sevinç ve Sözcü editörü Mustafa Balcı tutuklandı; İsmail Saymaz, Murat Ağırel gibi isimler ev hapsinde. Yeni Parti’nin raporuna göre son 70 günde 25 gazeteci gözaltına alındı, 10'u tutuklandı, 1350 sosyal medya hesabına engel getirildi. Basın özgürlüğü endeksinde 2025 yılında 180 ülke arasında 159. sıradayız.
-
-### İktidarın Elindeki “Sopa” El Değiştirirse…
-
-Bugün iktidarın elinde olan sopa, demokrasilere göre yarın iktidara gelebilme potansiyeli yüksek muhalefetin eline geçerse ne olacak? Bugünkü iktidar, sopanın aynı biçimde kullanılmasını alkışlayacak mı, yoksa karşı mı çıkacak?
-
-> Seçmenler iktidara, "<strong><em>Bizi adalet üzerine ve yasalara uygun olarak yönetin</em></strong>" diye yetki verir. Önüne sandık konulduğunda ise o yetkiyi almasını gayet iyi bilir.
+Seçmenler yöneticilere *"Bizi adalet üzerine ve yasalara uygun olarak yönetin"* diyerek yetki verir. Önüne sandık konulduğunda ise o yetkiyi geri almasını çok iyi bilir.
