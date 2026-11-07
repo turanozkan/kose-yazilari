@@ -46,11 +46,11 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 				</div>
 				<div class="row">
 					<span class="label">Ödüller</span>
-					<div class="row">
-					<span class="label">E-posta</span>
-					<span class="val"><a href="mailto:iletisim@turanozkan.tr" style="color: #0645ad; text-decoration: none;">iletisim@turanozkan.tr</a></span>
-				</div>
 					<span class="val">Çok sayıda mesleki başarı ve gazetecilik ödülü</span>
+				</div>
+				<div class="row">
+					<span class="label">E-posta</span>
+					<span class="val"><a href="mailto:iletisim@turanozkan.tr" class="email-link">iletisim@turanozkan.tr</a></span>
 				</div>
 			</div>
 		</div>
@@ -71,7 +71,7 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 				</li>
 				<li><a href="#uzmanlik-alanlari">3 Uzmanlık alanları ve araştırma odakları</a></li>
 				<li><a href="#oduller">4 Ödüller ve başarılar</a></li>
-				<li><a href="#dis-baglantilar">5 Dış bağlantılar</a></li>
+				<li><a href="#dis-baglantilar">5 Dış bağlantılar ve iletişim</a></li>
 			</ul>
 		</div>
 
@@ -113,9 +113,9 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 			Haber, dizi yazı, araştırma dosyaları ve televizyon haberciliği dallarında ortaya koyduğu çalışmalar dolayısıyla çeşitli meslek örgütleri ve basın kuruluşları tarafından <strong>çok sayıda mesleki başarı ödülüne</strong> layık görülmüştür.
 		</p>
 
-		<h2 id="dis-baglantilar">Dış bağlantılar</h2>
+		<h2 id="dis-baglantilar">Dış bağlantılar ve iletişim</h2>
 		<ul class="wiki-links">
-		<li><strong>E-posta:</strong> <a href="mailto:iletisim@turanozkan.tr">iletisim@turanozkan.tr</a></li>
+			<li><strong>E-posta:</strong> <a href="mailto:iletisim@turanozkan.tr">iletisim@turanozkan.tr</a></li>
 			<li><a href="https://sonsoz.com.tr/turan-ozkan" target="_blank" rel="noopener noreferrer">Sonsöz Gazetesi – Turan Özkan Köşe Yazıları Arşivi</a></li>
 			<li><a href="https://x.com/turanozkan" target="_blank" rel="noopener noreferrer">X (Twitter) Resmî Hesabı (@turanozkan)</a></li>
 			<li><a href="https://www.youtube.com/@turanoezkan" target="_blank" rel="noopener noreferrer">YouTube Resmî Kanalı (@turanoezkan)</a></li>
@@ -136,7 +136,6 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 		font-size: 1.05rem;
 		margin-bottom: 1.5rem;
 	}
-	/* Wikipedia Bilgi Kutusu (Infobox) */
 	.wiki-infobox {
 		float: right;
 		width: 320px;
@@ -183,14 +182,229 @@ import bioImg from '../assets/turan-ozkan-biyografi.jpg';
 	}
 	.infobox-data .label {
 		font-weight: 600;
-		width: 42%;
+		width: 38%;
 		padding-right: 0.5rem;
 		color: #54595d;
+		flex-shrink: 0;
 	}
 	.infobox-data .val {
-		width: 58%;
+		width: 62%;
+		word-break: break-all;
 	}
-	/* İçindekiler Tablosu */
+	.email-link {
+		color: #0645ad;
+		text-decoration: none;
+	}
+	.email-link:hover {
+		text-decoration: underline;
+	}
+	.wiki-toc {
+		display: inline-block;
+		background: #f8f9fa;
+		border: 1px solid #a2a9b1;
+		padding: 0
+
+cat << 'EOF' > src/pages/about.astro
+---
+import Layout from '../layouts/BlogPost.astro';
+import bioImg from '../assets/turan-ozkan-biyografi.jpg';
+---
+
+<Layout
+	title="Turan Özkan"
+	description="Turan Özkan yaşam öyküsü, eğitim geçmişi, basın çalışmaları ve uzmanlık alanları."
+	heroImage=""
+>
+	<div class="wiki-container">
+		<div class="wiki-infobox">
+			<div class="infobox-title">Turan Özkan</div>
+			<div class="infobox-image-box">
+				<img src={bioImg.src} alt="Turan Özkan" class="infobox-photo" />
+				<div class="infobox-caption">Gazeteci ve Yazar Turan Özkan</div>
+			</div>
+			<div class="infobox-data">
+				<div class="row">
+					<span class="label">Doğum</span>
+					<span class="val">1 Ağustos 1966<br />Mardin, Kızıltepe</span>
+				</div>
+				<div class="row">
+					<span class="label">Meslek</span>
+					<span class="val">Gazeteci, Yazar, İnsan İlişkileri ve İletişim Uzmanı, Yönetici</span>
+				</div>
+				<div class="row">
+					<span class="label">Etkin yıllar</span>
+					<span class="val">1980–günümüz</span>
+				</div>
+				<div class="row">
+					<span class="label">Çalışma alanları</span>
+					<span class="val">Dergi, Haber Ajansı, Gazete, Televizyon, Genel Ağ</span>
+				</div>
+				<div class="row">
+					<span class="label">Eğitim</span>
+					<span class="val">Lisans Eğitimi: Uluslararası İlişkiler<br />Yüksek Lisans: İnsan İlişkileri</span>
+				</div>
+				<div class="row">
+					<span class="label">Uzmanlık</span>
+					<span class="val">Siyaset, Ekonomi, Siyasal İletişim, Bilişim Teknolojileri, Yapay Zeka ve İstem Mühendisliği</span>
+				</div>
+				<div class="row">
+					<span class="label">Çalıştığı kurumlar</span>
+					<span class="val">Günaydın Grubu, THA, Flash TV, Halk TV, Sonsöz Gazetesi</span>
+				</div>
+				<div class="row">
+					<span class="label">Ödüller</span>
+					<span class="val">Çok sayıda mesleki başarı ve gazetecilik ödülü</span>
+				</div>
+				<div class="row">
+					<span class="label">E-posta</span>
+					<span class="val"><a href="mailto:iletisim@turanozkan.tr" class="email-link">iletisim@turanozkan.tr</a></span>
+				</div>
+			</div>
+		</div>
+
+		<p class="lead-text">
+			<strong>Turan Özkan</strong> (d. 1 Ağustos 1966, Kızıltepe), Gazeteci, yazar, medya yöneticisi, insan ilişkileri ve iletişim uzmanı. 1980 yılından bu yana yazılı basın, haber ajansları, dergicilik ve televizyon yayıncılığında muhabirlikten kurucu genel yayın yönetmenliğine kadar çeşitli basamaklarda bulunmuştur. Çalışma yaşamı boyunca siyasal iletişim, ekonomi politikaları ve iletişim teknolojileri üzerine odaklanan Özkan, insan ilişkileri alanındaki yüksek lisans birikimiyle toplum bilimi, insan bilimi, sosyal ruh bilimi ile çağdaş yapay zeka ve istem mühendisliği alanlarında araştırmalar yürütmektedir. Mesleki çalışmaları çok sayıda başarı ödülüyle taçlandırılmıştır.
+		</p>
+
+		<div class="wiki-toc">
+			<div class="toc-title">İçindekiler</div>
+			<ul>
+				<li><a href="#ilk-yillar-ve-egitim">1 İlk yılları ve eğitim yaşamı</a></li>
+				<li><a href="#basin-yasam">2 Basın yaşamı ve çalışma ortamları</a>
+					<ul>
+						<li><a href="#ajans-dergi-gazete">2.1 Haber ajansları, Günaydın Grubu ve yazılı basın</a></li>
+						<li><a href="#televizyon-yonetimi">2.2 Televizyon haberciliği ve yöneticilik</a></li>
+					</ul>
+				</li>
+				<li><a href="#uzmanlik-alanlari">3 Uzmanlık alanları ve araştırma odakları</a></li>
+				<li><a href="#oduller">4 Ödüller ve başarılar</a></li>
+				<li><a href="#dis-baglantilar">5 Dış bağlantılar ve iletişim</a></li>
+			</ul>
+		</div>
+
+		<h2 id="ilk-yillar-ve-egitim">İlk yılları ve eğitim yaşamı</h2>
+		<p>
+			1 Ağustos 1966 tarihinde Mardin'in Kızıltepe ilçesinde doğdu. Çok alanlı bir yükseköğretim sürecinden geçen Özkan, lisans düzeyindeki eğitimlerinin ardından <strong>İnsan İlişkileri</strong> alanında yüksek lisans derecesi aldı. İnsan davranışları, toplumsal yapılar ve öbek etkileşimlerine odaklanan bu eğitim, köşe yazılarının ve araştırmalarının merkezine insan bilimi (antropoloji), toplum bilimi (sosyoloji) ve ruh bilimi (psikoloji) yöntemlerini yerleştirmesinde temel dayanak oldu.
+		</p>
+
+		<h2 id="basin-yasam">Basın yaşamı ve çalışma ortamları</h2>
+		<p>
+			Mesleğe 1980 yılında bölge muhabirliği ile başladı. 40 yılı aşan çalışma yaşamı boyunca haber ajansı, dergi, gazete ve televizyon yayıncılığı gibi kitle iletişiminin bütün ana kollarında aktif görevler üstlendi.
+		</p>
+
+		<h3 id="ajans-dergi-gazete">Haber ajansları, Günaydın Grubu ve yazılı basın</h3>
+		<p>
+			Meslek yaşamının ilk evrelerinde <em>Türk Haberler Ajansı (THA)</em> bünyesinde görev aldı, ardından Türk basınının kitlesel tiraj ve haber öncülerinden olan <em>Günaydın Grubu</em> bünyesinde çalışmalarını sürdürdü. Çeşitli süreli yayın ve dergilerde araştırma dosyaları hazırladı. 1987 yılından itibaren başkent haberciliğinde uzmanlaşarak Cumhurbaşkanlığı, Başbakanlık ve Parlamento muhabirliği yaptı. Türkiye'nin yakın siyasi tarihindeki erken seçim süreçlerini, hükümet krizlerini, ekonomik dalgalanmaları ve anayasal tartışmaları doğrudan meclis çalışmalarından ve siyasetin karar alma merkezlerinden izledi.
+		</p>
+
+		<h3 id="televizyon-yonetimi">Televizyon haberciliği ve yöneticilik</h3>
+		<p>
+			Yazılı basındaki haber birikimini ulusal televizyon kanallarına aktararak haber merkezlerinin yönetim kademelerinde sorumluluklar üstlendi:
+		</p>
+		<ul>
+			<li><strong>Flash TV:</strong> Ankara Haber Müdürlüğü ve Genel Koordinatör Vekilliği görevlerini yürüttü. Günlük haber bültenlerinin, canlı yayın kuşaklarının ve siyaset tartışma programlarının yayına hazırlık ilkelerini yönetti.</li>
+			<li><strong>Halk TV:</strong> Kanalın yayına başlama sürecinde yer alarak Kurucu Genel Yayın Yönetmenliği görevini üstlendi ve yayın çizgisinin omurgasını oluşturdu.</li>
+		</ul>
+
+		<h2 id="uzmanlik-alanlari">Uzmanlık alanları ve araştırma odakları</h2>
+		<p>
+			Özkan'ın çalışma ve inceleme konuları iki temel eksende toplanmaktadır:
+		</p>
+		<ul>
+			<li><strong>Siyaset, Ekonomi ve Toplumsal Dinamikler:</strong> Kamu bütçesi, gelir dağılımı eşitsizliği, yargı bağımsızlığı, anayasa hukuku ve siyasal iletişim yöntemleri. Olayları yalnızca güncel siyaset yönüyle değil, toplumsal tepkiler, kültürel kökenler ve kitle ruh bilimi boyutuyla da ele almaktadır.</li>
+			<li><strong>Yeni İletişim Teknolojileri ve Yapay Zeka:</strong> Dijital yayıncılık mimarileri, sosyal ağ işleyişleri ve üretken yapay zeka sistemleri üzerine yoğunlaşmıştır. Özellikle <em>istem mühendisliği</em>, yapay zekanın habercilik pratikleri üzerindeki etkisi ve kamuoyunu yönlendirme süreçlerine ilişkin araştırmalar yapmaktadır.</li>
+		</ul>
+
+		<h2 id="oduller">Ödüller ve başarılar</h2>
+		<p>
+			Haber, dizi yazı, araştırma dosyaları ve televizyon haberciliği dallarında ortaya koyduğu çalışmalar dolayısıyla çeşitli meslek örgütleri ve basın kuruluşları tarafından <strong>çok sayıda mesleki başarı ödülüne</strong> layık görülmüştür.
+		</p>
+
+		<h2 id="dis-baglantilar">Dış bağlantılar ve iletişim</h2>
+		<ul class="wiki-links">
+			<li><strong>E-posta:</strong> <a href="mailto:iletisim@turanozkan.tr">iletisim@turanozkan.tr</a></li>
+			<li><a href="https://sonsoz.com.tr/turan-ozkan" target="_blank" rel="noopener noreferrer">Sonsöz Gazetesi – Turan Özkan Köşe Yazıları Arşivi</a></li>
+			<li><a href="https://x.com/turanozkan" target="_blank" rel="noopener noreferrer">X (Twitter) Resmî Hesabı (@turanozkan)</a></li>
+			<li><a href="https://www.youtube.com/@turanoezkan" target="_blank" rel="noopener noreferrer">YouTube Resmî Kanalı (@turanoezkan)</a></li>
+			<li><a href="https://www.linkedin.com/in/turanozkan" target="_blank" rel="noopener noreferrer">LinkedIn Profili (turanozkan)</a></li>
+			<li><a href="https://www.instagram.com/turanozkan/" target="_blank" rel="noopener noreferrer">Instagram Hesabı (@turanozkan)</a></li>
+			<li><a href="https://www.facebook.com/turanoezkan" target="_blank" rel="noopener noreferrer">Facebook Resmî Sayfası (turanoezkan)</a></li>
+		</ul>
+	</div>
+</Layout>
+
+<style>
+	.wiki-container {
+		position: relative;
+		line-height: 1.75;
+		color: #202122;
+	}
+	.lead-text {
+		font-size: 1.05rem;
+		margin-bottom: 1.5rem;
+	}
+	.wiki-infobox {
+		float: right;
+		width: 320px;
+		margin: 0 0 1.5rem 1.5rem;
+		background: #f8f9fa;
+		border: 1px solid #a2a9b1;
+		padding: 0.5rem;
+		font-size: 0.88rem;
+		border-radius: 2px;
+	}
+	.infobox-title {
+		text-align: center;
+		font-weight: bold;
+		font-size: 1.15rem;
+		padding: 0.4rem 0;
+		background-color: #eaecf0;
+		border-bottom: 1px solid #a2a9b1;
+		margin: -0.5rem -0.5rem 0.5rem -0.5rem;
+	}
+	.infobox-image-box {
+		text-align: center;
+		padding: 0.5rem 0;
+		border-bottom: 1px solid #eaecf0;
+		margin-bottom: 0.5rem;
+	}
+	.infobox-photo {
+		max-width: 100%;
+		height: auto;
+		border-radius: 2px;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+	.infobox-caption {
+		font-size: 0.8rem;
+		color: #54595d;
+		margin-top: 0.4rem;
+	}
+	.infobox-data .row {
+		display: flex;
+		padding: 0.4rem 0;
+		border-bottom: 1px solid #eaecf0;
+	}
+	.infobox-data .row:last-child {
+		border-bottom: none;
+	}
+	.infobox-data .label {
+		font-weight: 600;
+		width: 38%;
+		padding-right: 0.5rem;
+		color: #54595d;
+		flex-shrink: 0;
+	}
+	.infobox-data .val {
+		width: 62%;
+		word-break: break-all;
+	}
+	.email-link {
+		color: #0645ad;
+		text-decoration: none;
+	}
+	.email-link:hover {
+		text-decoration: underline;
+	}
 	.wiki-toc {
 		display: inline-block;
 		background: #f8f9fa;
